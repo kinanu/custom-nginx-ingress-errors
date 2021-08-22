@@ -25,4 +25,4 @@ These instructions assume that you deployed this in the default `ingress-nginx` 
 
 ## Changes for microk8s
 
-Use namespace `nginx`
+Use namespace `ingress`
