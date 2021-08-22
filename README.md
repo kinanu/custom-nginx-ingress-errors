@@ -22,5 +22,7 @@ These instructions assume that you deployed this in the default `ingress-nginx` 
 2. Deploy to the Kubernetes cluster: `kubectl apply -f k8s-deployment.yaml`
 3. Modify the `ingress-nginx/ingress-nginx-controller` Deployment and set the value of the `--default-backend-service` flag to the name of the newly created error backend, which should be `ingress-nginx/nginx-errors` by default.
 4. Edit the `ingress-nginx/nginx-configuration` ConfigMap  and add the key:value pair of `"custom-http-errors": "404,500,503"`
-5. ??????
-6. PROFIT!!!!1
+
+## Changes for microk8s
+
+Use namespace `nginx`
