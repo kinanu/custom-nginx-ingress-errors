@@ -26,3 +26,36 @@ These instructions assume that you deployed this in the default `ingress-nginx` 
 ## Changes for microk8s
 
 Use namespace `ingress`
+
+ConfigMap:
+ 
+```
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-load-balancer-microk8s-conf
+  namespace: ingress
+  selfLink: /api/v1/namespaces/ingress/configmaps/nginx-load-balancer-microk8s-conf
+  uid: c3a3d0a6-39fa-4ee2-ae07-3b7864e521a1
+  resourceVersion: '204257'
+  creationTimestamp: '2021-08-21T12:46:40Z'
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: >
+      {"apiVersion":"v1","data":{"custom-http-errors":"404,500,503"},"kind":"ConfigMap","metadata":{"annotations":{},"creationTimestamp":"2021-08-21T12:46:40Z","managedFields":[{"apiVersion":"v1","fieldsType":"FieldsV1","fieldsV1":{"f:metadata":{"f:annotations":{".":{},"f:kubectl.kubernetes.io/last-applied-configuration":{}}}},"manager":"kubectl-client-side-apply","operation":"Update","time":"2021-08-21T12:46:40Z"}],"name":"nginx-load-balancer-microk8s-conf","namespace":"ingress","selfLink":"/api/v1/namespaces/ingress/configmaps/nginx-load-balancer-microk8s-conf","uid":"c3a3d0a6-39fa-4ee2-ae07-3b7864e521a1"}}
+  managedFields:
+    - manager: kubectl-client-side-apply
+      operation: Update
+      apiVersion: v1
+      time: '2021-08-22T10:55:53Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:data':
+          .: {}
+          'f:custom-http-errors': {}
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:kubectl.kubernetes.io/last-applied-configuration': {}
+data:
+  custom-http-errors: '404,500,503'
+```
